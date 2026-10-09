@@ -2,7 +2,7 @@
 
 Discourse running on Cloudflare Containers, with R2 holding everything that has to survive a restart.
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/build23w/cloudflare-discourse)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/gary23w/cloudflare-discourse)
 
 Discourse is the poster child for "just get a VPS." It's a big Rails app that expects Postgres, Redis, Sidekiq, and a disk that doesn't disappear out from under it. I wanted to see if it could live on Cloudflare's serverless stack instead. It can, and the result is a forum that costs about as much as a cheap VPS but never needs to be updated, patched, or SSH'd into.
 
@@ -34,7 +34,7 @@ Mail goes through Cloudflare Email Service by default (SMTP submission with impl
 ## Quick start
 
 ```bash
-git clone https://github.com/build23w/cloudflare-discourse && cd cloudflare-discourse
+git clone https://github.com/gary23w/cloudflare-discourse && cd cloudflare-discourse
 npm install
 npx wrangler login
 ```

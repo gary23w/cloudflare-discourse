@@ -4,7 +4,7 @@
   "private": false,
   "description": "Real Discourse running entirely on Cloudflare: Workers + Containers + R2 + Email Service. No servers, no local Docker, self-updating.",
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/build23w/cloudflare-discourse" },
+  "repository": { "type": "git", "url": "https://github.com/gary23w/cloudflare-discourse" },
   "keywords": ["discourse", "cloudflare", "workers", "containers", "r2", "forum", "serverless"],
   "type": "module",
   "scripts": {
