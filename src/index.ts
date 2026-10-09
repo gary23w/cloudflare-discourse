@@ -53,7 +53,7 @@ const ENTRYPOINT_SCRIPT = [
   'if [ -n "$CF_R2_ACCESS_KEY_ID" ] && curl -fsSL --retry 5 --aws-sigv4 aws:amz:auto:s3 --user "$CF_R2_ACCESS_KEY_ID:$CF_R2_SECRET_ACCESS_KEY" "$CF_R2_ENDPOINT/$CF_R2_BACKUPS_BUCKET/bootstrap/bundle.tar.gz" -o /cf/bundle.tar.gz && tar xzf /cf/bundle.tar.gz -C /cf; then src=r2-bundle; fi',
   // The tarball nests everything under <repo>-<ref>/container/, so strip two levels
   // to land the same files/ tree the bundle produces.
-  'if [ -z "$src" ]; then echo "[cf-entry] R2 bundle unavailable; fetching the repo tarball"; curl -fsSL --retry 5 "https://codeload.github.com/build23w/cloudflare-discourse/tar.gz/refs/heads/main" -o /cf/repo.tar.gz; tar xzf /cf/repo.tar.gz -C /cf --strip-components=2 --wildcards "*/container/files/*"; src=repo-tarball; fi',
+  'if [ -z "$src" ]; then echo "[cf-entry] R2 bundle unavailable; fetching the repo tarball"; curl -fsSL --retry 5 "https://codeload.github.com/gary23w/cloudflare-discourse/tar.gz/refs/heads/main" -o /cf/repo.tar.gz; tar xzf /cf/repo.tar.gz -C /cf --strip-components=2 --wildcards "*/container/files/*"; src=repo-tarball; fi',
   'echo "[cf-entry] bootstrap source: $src"',
   "exec bash /cf/files/usr/local/bin/cf-boot",
 ].join("; ");
